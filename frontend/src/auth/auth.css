@@ -1,0 +1,202 @@
+*{box-sizing:border-box}.auth-page{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;font-family:Inter,system-ui,-apple-system,sans-serif;color:#16223b}.auth-hero{background:radial-gradient(circle at 75% 20%,#394c9b 0,transparent 42%),linear-gradient(145deg,#101b38,#1c2e60);color:white;padding:clamp(32px,5vw,88px);display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}.auth-brand,.auth-mobile-brand{font-size:24px;font-weight:800;letter-spacing:-.7px}.auth-kicker,.auth-eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;color:#7e98ff}.auth-hero h1{font-size:clamp(45px,5vw,76px);letter-spacing:-3px;line-height:1.1;margin:25px 0}.auth-hero h1 em{font-style:normal;color:#9bb0ff}.auth-hero p{font-size:18px;line-height:1.8;max-width:490px;color:#cbd6f2}.auth-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:35px}.auth-pills span{border:1px solid #7185bc88;border-radius:50px;padding:10px 14px;font-size:13px}.auth-hero small{color:#b3c0e6}.auth-panel{background:#f7f9fd;display:flex;align-items:center;justify-content:center;padding:30px}.auth-card{background:white;width:min(100%,460px);padding:clamp(24px,4vw,48px);border:1px solid #e6eaf4;border-radius:22px;box-shadow:0 20px 60px #182c5312}.auth-card h2{font-size:29px;letter-spacing:-1px;margin:14px 0 6px}.auth-subtitle{color:#68758b;margin:0 0 30px}.auth-card label{display:block;font-size:13px;font-weight:700;margin-bottom:20px}.auth-card input{display:block;margin-top:8px;width:100%;padding:14px 15px;border:1px solid #dce2ed;border-radius:11px;font:inherit;font-size:15px;outline:none}.auth-card input:focus{border-color:#4f6ef7;box-shadow:0 0 0 3px #4f6ef71a}.auth-submit{width:100%;padding:15px;background:#315ff5;color:white;border:0;border-radius:11px;font-size:15px;font-weight:800;cursor:pointer}.auth-submit:disabled{opacity:.6;cursor:wait}.auth-switch{text-align:center;font-size:14px;color:#64748b;margin:23px 0 0}.auth-switch button{background:none;border:0;color:#315ff5;font-weight:800;cursor:pointer}.auth-error{background:#fff1f2;color:#be123c;padding:12px;border-radius:9px;margin-bottom:18px;font-size:13px}.auth-mobile-brand{display:none}@media(max-width:850px){.auth-page{grid-template-columns:1fr}.auth-hero{display:none}.auth-panel{min-height:100vh}.auth-mobile-brand{display:block;color:#315ff5;margin-bottom:30px}}
+
+/* TaskSphere — Professional Auth Theme */
+
+.ts-auth,
+.auth-page,
+.auth-layout {
+  --auth-dark: #172923;
+  --auth-accent: #167d64;
+  --auth-accent-hover: #116b55;
+  --auth-muted: #a9c1b5;
+}
+
+/* Left welcome panel */
+.auth-left,
+.auth-brand-panel,
+.auth-hero,
+.ts-auth-hero {
+  background: linear-gradient(
+    145deg,
+    #14251f 0%,
+    #1b332a 55%,
+    #244538 100%
+  ) !important;
+  color: #f6faf7;
+}
+
+/* Welcome heading */
+.auth-left h1,
+.auth-brand-panel h1,
+.auth-hero h1,
+.ts-auth-hero h1 {
+  color: #ffffff;
+}
+
+/* Highlighted heading */
+.auth-left h1 span,
+.auth-brand-panel h1 span,
+.auth-hero h1 span,
+.ts-auth-hero h1 span {
+  color: #a6d7c2 !important;
+}
+
+/* Right side */
+.auth-right,
+.auth-form-panel,
+.ts-auth-form-panel {
+  background: #f3f5f1 !important;
+}
+
+/* Form card */
+.auth-card,
+.auth-form-card,
+.ts-auth-card {
+  background: #ffffff;
+  border: 1px solid #e1e8e1;
+  border-radius: 24px;
+  box-shadow: 0 16px 45px rgba(22, 45, 34, 0.05);
+}
+
+/* Primary actions */
+.auth-card button[type="submit"],
+.auth-form-card button[type="submit"],
+.ts-auth-card button[type="submit"] {
+  background: #167d64 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.auth-card button[type="submit"]:hover,
+.auth-form-card button[type="submit"]:hover,
+.ts-auth-card button[type="submit"]:hover {
+  background: #116b55 !important;
+}
+
+/* Inputs */
+.auth-card input:focus,
+.auth-form-card input:focus,
+.ts-auth-card input:focus {
+  border-color: #167d64 !important;
+  outline: 3px solid rgba(22, 125, 100, 0.12);
+}
+
+/* TaskSphere Auth — Remove Blue Text Accents */
+
+/* Highlighted heading */
+.auth-left h1 span,
+.auth-brand-panel h1 span,
+.auth-hero h1 span,
+.ts-auth-hero h1 span {
+  color: #b5e2c9 !important;
+}
+
+/* Eyebrow text: WELCOME BACK / YOUR WORK */
+.auth-left .eyebrow,
+.auth-hero .eyebrow,
+.auth-card .eyebrow,
+.auth-brand-panel .eyebrow,
+.auth-left .subtitle,
+.auth-hero .subtitle {
+  color: #91cdb1 !important;
+}
+
+/* Left-side descriptions */
+.auth-left p,
+.auth-brand-panel p,
+.auth-hero p,
+.ts-auth-hero p {
+  color: #d0e1d8 !important;
+}
+
+/* Right-side subtitle */
+.auth-right p,
+.auth-card p,
+.auth-form-panel p,
+.ts-auth-card p {
+  color: #667b70 !important;
+}
+
+/* =========================================
+   TASKSPHERE - FINAL AUTH COLOR FIX
+   ========================================= */
+
+/* Left panel */
+.auth-hero {
+  background: linear-gradient(
+    145deg,
+    #14251f 0%,
+    #1b332a 55%,
+    #244538 100%
+  ) !important;
+}
+
+/* YOUR WORK + WELCOME BACK */
+.auth-kicker,
+.auth-eyebrow {
+  color: #a8d9bd !important;
+}
+
+/* "what matters." heading */
+.auth-hero h1 em {
+  color: #b5e2c9 !important;
+}
+
+/* Left description */
+.auth-hero p {
+  color: #d5e7dc !important;
+}
+
+/* Bottom text */
+.auth-hero small {
+  color: #b8d2c3 !important;
+}
+
+/* Right panel */
+.auth-panel {
+  background: #f3f5f1 !important;
+}
+
+/* Form heading */
+.auth-card h2 {
+  color: #20372d !important;
+}
+
+/* Form subtitle */
+.auth-subtitle {
+  color: #667b70 !important;
+}
+
+/* Input focus */
+.auth-card input:focus {
+  border-color: #167d64 !important;
+  box-shadow: 0 0 0 3px rgba(22, 125, 100, 0.12) !important;
+}
+
+/* Sign in button */
+.auth-submit {
+  background: #167d64 !important;
+  color: #ffffff !important;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #116b55 !important;
+}
+
+/* Create account button */
+.auth-switch button {
+  background: #e4f3ea !important;
+  color: #116b55 !important;
+  border: 1px solid #c4e4d2 !important;
+  border-radius: 9px;
+  padding: 10px 14px;
+}
+
+.auth-switch button:hover {
+  background: #d4ebde !important;
+}
+
+/* Mobile branding */
+.auth-mobile-brand {
+  color: #167d64 !important;
+}

@@ -1,0 +1,98 @@
+/* TaskSphere Slate & Emerald design system. Import AFTER App.css. */
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#24382f;background:#f2f4f0;--ts-primary:#167d64;--ts-primary-dark:#11634f;--ts-ink:#20372d;--ts-border:#dfe6de;--ts-muted:#66766d;--ts-surface:#fff;--ts-bg:#f2f4f0}
+body{background:var(--ts-bg);color:var(--ts-ink)}
+.sidebar{background:#182923;color:#e9f0eb;border-right:1px solid #31463b}
+.sidebar h2{color:#b9ead7}
+.sidebar a{color:#c5d4cb}
+.sidebar a.active,.sidebar a:hover{background:#167d64;color:white}
+.main-content{background:var(--ts-bg);padding:28px 36px}
+button{background:var(--ts-primary);border-radius:10px;font-weight:600;transition:background .18s ease,transform .18s ease}
+button:hover:not(:disabled){background:var(--ts-primary-dark)}
+button:disabled{opacity:.55;cursor:not-allowed}
+:where(input,textarea,select){font:inherit;accent-color:var(--ts-primary)}
+:where(input,textarea,select):focus-visible{outline:2px solid #58ae93;outline-offset:1px}
+:where(.stat-card,.task-card,.project-card,.dashboard-section,.category-analytics-card,.productivity-insight-card,.tag-analytics-item){border-color:var(--ts-border);box-shadow:0 4px 18px rgba(25,48,36,.035)}
+:where(.filter-btn,.priority-filter-btn,.category-filter-btn,.tag-filter-btn){background:#f2f5f1;color:#43574c;border:1px solid #dce5dd;border-radius:9px;margin:0}
+:where(.filter-btn,.priority-filter-btn,.category-filter-btn,.tag-filter-btn):hover:not(:disabled){background:#e3efe8;color:#11634f;border-color:#9acbb7}
+:where(.active-filter,.active-priority,.category-filter-btn.active-category,.tag-filter-btn.active-tag),:where(.active-filter,.active-priority,.category-filter-btn.active-category,.tag-filter-btn.active-tag):hover:not(:disabled){background:var(--ts-primary);color:white;border-color:var(--ts-primary)}
+:where(.search-input,.sort-select,.project-filter-select){border:1px solid var(--ts-border);background:white;color:var(--ts-ink);border-radius:10px}
+:where(.search-input,.sort-select,.project-filter-select):focus{border-color:var(--ts-primary);box-shadow:0 0 0 3px rgba(22,125,100,.12)}
+:where(.progress-fill,.project-progress-fill,.category-progress-fill,.tag-analytics-fill){background:linear-gradient(90deg,#219c7c,#11634f)}
+.ts-tasks-page{max-width:1500px;margin:0 auto;display:grid;gap:22px}
+.ts-tasks-header{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.ts-eyebrow{font-size:11px;letter-spacing:.12em;font-weight:800;color:#27856a}
+.ts-tasks-header h1{font-size:clamp(28px,3vw,36px);letter-spacing:-.04em;margin:6px 0 5px;color:#20372d}
+.ts-tasks-header p{color:#718077;margin:0;font-size:14px}
+.ts-tasks-count{background:#e2f2e9;color:#11634f;border:1px solid #c9e5d6;border-radius:999px;padding:9px 14px;font-weight:700;font-size:12px}
+.ts-task-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ts-metric{padding:20px 22px;background:white;border:1px solid var(--ts-border);border-radius:16px;box-shadow:0 3px 12px rgba(25,48,36,.03);display:flex;flex-direction:column;gap:9px}
+.ts-metric span{font-size:13px;color:var(--ts-muted);font-weight:600}
+.ts-metric strong{font-size:30px;color:#20372d;line-height:1;font-variant-numeric:tabular-nums}
+.ts-panel{background:white;border:1px solid var(--ts-border);border-radius:18px;padding:24px;box-shadow:0 5px 24px rgba(25,48,36,.035);min-width:0}
+.ts-section-head{margin-bottom:18px}.ts-section-head h2{margin:5px 0 0;font-size:20px;letter-spacing:-.025em;color:#20372d}
+.ts-filters-panel h3{font-size:13px;color:#43584d;font-weight:750;margin:20px 0 9px}
+.ts-field-label{display:block;font-size:13px;color:#43584d;font-weight:750;margin-bottom:8px}
+.ts-filters-panel .search-input{margin:0;width:100%;padding:13px 15px}
+.ts-filters-panel :where(.filter-buttons,.priority-filter-buttons,.category-filter-buttons,.tag-filter-buttons){margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.ts-filters-panel :where(.filter-btn,.priority-filter-btn,.category-filter-btn,.tag-filter-btn){padding:9px 14px;font-size:13px}
+.ts-filters-panel .project-filter-select{width:100%;max-width:340px;padding:12px}
+.ts-filters-panel .sort-select{max-width:340px}
+.ts-filters-panel .clear-filters-btn{background:#e8eeea;color:#425a4b;margin:18px 0 0}
+.ts-filters-panel .clear-filters-btn:hover{background:#dce7df}
+.ts-filters-panel .overdue-filter{margin:16px 0 0;color:#52655a;font-size:13px}
+.ts-list-panel>p{color:#6b7b71;font-size:13px}
+.ts-list-panel :where(.task-selection-toolbar,.bulk-status-toolbar,.bulk-delete-toolbar){background:#f7f9f6;padding:12px 14px;border-radius:10px;border:1px solid #e4ebe4}
+.ts-list-panel .task-card{background:#fff;border:1px solid #e1e8e0;border-radius:13px}
+.ts-list-panel .task-card:hover{border-color:#acd6c3;box-shadow:0 5px 20px rgba(25,48,36,.07)}
+.ts-create-panel .task-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch}
+.ts-create-panel .task-form>*{min-width:0;max-width:100%;width:100%;margin:0}
+.ts-create-panel .task-form :where(input,textarea,select){min-width:0;width:100%;max-width:100%;background:#fbfcfa;border:1px solid #dce5dc;border-radius:10px;padding:12px 13px;color:#20372d;min-height:46px}
+.ts-create-panel .task-form textarea{min-height:46px;resize:vertical}
+.ts-create-panel .task-form button{min-height:46px}
+.ts-create-panel .task-form label{font-size:13px;color:#40574a;font-weight:600}
+.ts-create-panel .task-form input[type=checkbox]{width:auto;min-height:auto}
+.ts-create-panel .task-form input[type=date]{color-scheme:light}
+.ts-global-toolbar{border-color:#e0e7de!important;background:#fff!important}
+.ts-action-btn{background:#edf4ee!important;color:#2e5540!important;border:1px solid #dce9df!important}
+.ts-action-btn:hover{background:#dcece2!important}
+.ts-danger-btn{background:#fff2f0!important;color:#a3423b!important;border-color:#f2d5d1!important}
+@media(max-width:1100px){.ts-create-panel .task-form{grid-template-columns:repeat(2,minmax(0,1fr))}.ts-task-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.main-content{padding:18px}.ts-panel{padding:17px}.ts-task-metrics{gap:9px}.ts-metric{padding:15px}.ts-metric strong{font-size:25px}.ts-create-panel .task-form{grid-template-columns:1fr}.ts-tasks-page{gap:15px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+
+/* GLOBAL UNIFICATION — overrides legacy blue styles across ALL routes */
+:root{--ts-primary:#167d64;--ts-primary-dark:#105c4a;--ts-ink:#20372d;--ts-muted:#64776b;--ts-border:#dfe6de;--ts-bg:#f2f4f0;--ts-surface:#fff;color:var(--ts-ink)!important;background:var(--ts-bg)!important}
+html,body,#root,.app-layout,.main-content{background:var(--ts-bg)!important;color:var(--ts-ink)}
+.ts-sidebar,.sidebar{background:#182923!important;border-right:1px solid #31463b!important;color:#e9f0eb!important}
+.ts-brand-mark{background:linear-gradient(135deg,#209a78,#0e6954)!important;box-shadow:0 7px 22px #126c5440!important}
+.ts-brand strong{color:#f3f8f4!important}.ts-brand small,.ts-nav-label{color:#a2b9ab!important}
+.ts-sidebar nav a,.sidebar nav a{color:#c5d4cb!important}
+.ts-sidebar nav a:hover,.sidebar nav a:hover{background:#2b4638!important;color:#fff!important}
+.ts-sidebar nav a.active,.sidebar nav a.active{background:linear-gradient(90deg,#167d64,#229675)!important;color:#fff!important;box-shadow:0 4px 14px #0d654c33!important}
+.ts-sidebar-footer{border-color:#385044!important}.ts-avatar{background:#356653!important}.ts-sidebar-footer small{color:#abc0b3!important}
+.ts-logout-btn{background:#2b493b!important;border-color:#4b6b58!important;color:#fff!important}.ts-logout-btn:hover{background:#386b52!important}
+.ts-global-toolbar,.ts-panel,.ts-settings-card,.dashboard-section,.stat-card,.task-card,.project-card,.category-analytics-card,.productivity-insight-card,.tag-analytics-item,.upcoming-task-card,.kanban-task-card{background:#fff!important;border-color:var(--ts-border)!important;box-shadow:0 4px 18px #19302408!important}
+.ts-global-toolbar-label,.ts-page-header p,.ts-muted,.ts-settings-heading p,.ts-field-hint,.ts-settings-card-head p{color:var(--ts-muted)!important}
+.ts-toolbar-dot{background:#209a78!important}.ts-eyebrow{color:#167d64!important}
+.ts-page,.ts-page h1,.ts-page h2,.ts-settings-heading h1,.ts-settings-card h2,.kanban-header h1,.dashboard-page h1,.project-card h3,.upcoming-task-card h3{color:var(--ts-ink)!important}
+.ts-action-btn,.ts-toolbar button,.ts-notice button{background:#edf4ee!important;color:#2e5540!important;border:1px solid #dce9df!important}
+.ts-action-btn:hover,.ts-toolbar button:hover,.ts-notice button:hover{background:#dcece2!important}
+.ts-danger-btn{background:#fff2f0!important;color:#a3423b!important;border-color:#f2d5d1!important}
+button:not(.ts-action-btn):not(.ts-danger-btn):not(.filter-btn):not(.priority-filter-btn):not(.category-filter-btn):not(.tag-filter-btn):not(.clear-filters-btn):not(.delete-btn):not(.bulk-delete-btn):not(.ts-logout-btn):not(.ts-toolbar button):not(.ts-notice button){background:#167d64;color:#fff}
+button:not(.ts-action-btn):not(.ts-danger-btn):not(.filter-btn):not(.priority-filter-btn):not(.category-filter-btn):not(.tag-filter-btn):not(.clear-filters-btn):not(.delete-btn):not(.bulk-delete-btn):not(.ts-logout-btn):hover:not(:disabled){background:#105c4a}
+.delete-btn,.bulk-delete-btn{background:#bd4a48!important;color:white!important}
+.filter-btn.active-filter,.priority-filter-btn.active-priority,.category-filter-btn.active-category,.tag-filter-btn.active-tag{background:#167d64!important;color:#fff!important;border-color:#167d64!important}
+.motivational-message,.ts-privacy-note{background:#eaf4ee!important;color:#245f48!important;border-color:#cfe5d8!important}
+.ts-privacy-note strong{color:#1b7055!important}
+.ts-calendar{border-color:var(--ts-border)!important}.ts-calendar-weekday{background:#e5f0e9!important;color:#285b44!important}.ts-calendar-outside{background:#f5f7f3!important}.ts-calendar-task{background:#d9eee3!important;color:#176449!important}
+.ts-bar-track,.progress-bar,.project-progress-track,.category-progress-bar,.tag-analytics-progress{background:#e2eae3!important}
+.ts-bar-track>div,.progress-fill,.project-progress-fill,.category-progress-fill,.tag-analytics-fill{background:linear-gradient(90deg,#2aa681,#167d64)!important}
+.kanban-column{background:#f0f4ef!important;border-color:#dfe7dd!important}.kanban-column-active{border-color:#83bda5!important}.kanban-count,.kanban-total-count{background:#deeee4!important;color:#176449!important}
+.kanban-task-tags span,.kanban-category,.task-tag-badge{background:#e7f2ea!important;color:#27664e!important;border-color:#d1e6d7!important}
+.kanban-details-btn{background:#edf4ee!important;color:#176449!important;border-color:#cfe5d8!important}
+.kanban-search-input,.kanban-project-filter,.ts-field,.ts-settings input,.task-form input,.task-form textarea,.task-form select,.search-input,.sort-select,.project-filter-select{border-color:#d6e1d7!important;color:#20372d!important;background:#fbfcfa!important}
+:where(input,textarea,select):focus-visible,.kanban-search-input:focus,.kanban-project-filter:focus,.ts-field:focus{outline:2px solid #65b89b!important;border-color:#65b89b!important;box-shadow:0 0 0 3px #167d641c!important}
+.ts-settings-symbol,.ts-settings-card-icon{background:#e4f2e9!important;color:#167d64!important}
+.ts-toggle-row input{accent-color:#167d64!important}.ts-settings-save button{background:linear-gradient(90deg,#167d64,#249b78)!important;box-shadow:0 7px 18px #167d6430!important}
+.ts-modal{background:#fff!important;color:var(--ts-ink)!important}
+@media(max-width:700px){.main-content{padding:18px!important}}
