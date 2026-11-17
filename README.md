@@ -333,11 +333,13 @@ Automated test coverage and CI/CD integration are potential future improvements.
 
 ## 🌐 Deployment
 
-**Status:** Deployment in progress.
+## 🌐 Live Demo
 
-The frontend and backend will be deployed separately, with production environment variables and database connectivity configured for the hosted application.
+🚀 **Live Application:** https://task-sphere-tau.vercel.app
 
-**Live Application:** Coming soon.
+🔗 **Backend API:** https://tasksphere-rp77.onrender.com
+
+💻 **GitHub Repository:** https://github.com/Aahana0212/TaskSphere
 
 ---
 
